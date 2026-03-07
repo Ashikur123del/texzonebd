@@ -31,19 +31,19 @@ const Navber = () => {
       />
 
       {/* ২. টপ বার (যা আপনি রাখতে চেয়েছিলেন) */}
-      <div className="bg-neutral text-neutral-content py-2 hidden lg:block border-b border-white/10 z-[60] relative">
+      <div className="bg-neutral text-neutral-content py-4 hidden lg:block border-b border-white/10 z-[60] relative">
         <div className="container mx-auto px-6 flex justify-between items-center text-xs font-medium tracking-wider">
           <div className="flex items-center gap-8">
-            <a href="tel:+8801710119711" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="tel:+8801710119711" className="flex items-center text-sm gap-2 hover:text-primary transition-colors">
               <FaPhone className="text-primary" /> +8801710119711
             </a>
-            <a href="mailto:info@texzonebd.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <FaEnvelope className="text-primary" /> info@texzonebd.com
+            <a href="mailto:info@texzonebd.com" className="flex items-center text-sm gap-2 hover:text-primary transition-colors">
+              <FaEnvelope className="text-primary " /> info@texzonebd.com
             </a>
           </div>
           <div className="flex items-center gap-4 uppercase">
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="flex items-center gap-1 text-sm">
+              <span className="w-6 h-6 bg-green-500 rounded-full animate-pulse"></span>
               100% Export Oriented
             </span>
           </div>

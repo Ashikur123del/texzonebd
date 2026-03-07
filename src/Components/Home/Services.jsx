@@ -26,7 +26,7 @@ const Services = () => {
       icon: <FaIndustry />,
       items: ["Single Jersey", "Pique", "Interlock", "Fleece", "Terry", "Jacquard"],
       bg: "bg-gradient-to-br from-slate-900 to-blue-900",
-      img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=600"
+      img: "../../../src/assets/f1.jpg"
     },
     {
       title: "Global Sourcing",
@@ -34,7 +34,7 @@ const Services = () => {
       icon: <FaShip />,
       items: ["Taffeta", "Ribstop", "Softshell", "Microfiber", "Canvas", "Taslane"],
       bg: "bg-gradient-to-br from-blue-900 to-indigo-900",
-      img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600"
+      img: "../../../src/assets/f2.jpg"
     },
     {
       title: "Advanced Processing",
@@ -42,7 +42,7 @@ const Services = () => {
       icon: <FaCogs />,
       items: ["All-over Print", "Contract Dyeing", "Shade Correction", "Fabric Repair"],
       bg: "bg-gradient-to-br from-slate-800 to-slate-900",
-      img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600"
+      img: "../../../src/assets/sep.jpg"
     }
   ];
 
@@ -79,8 +79,7 @@ const Services = () => {
               className={`${s.bg} rounded-[2rem] p-1 border border-white/10 overflow-hidden group hover:border-blue-500/50 transition-all duration-500`}
             >
               <div className="relative h-56 overflow-hidden rounded-t-[1.8rem]">
-                <img src={s.img} alt={s.title} className="w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <img src={s.img} alt={s.title} className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" />
                 <div className="absolute bottom-6 left-6">
                   <div className="text-amber-500 text-3xl mb-2">{s.icon}</div>
                   <h3 className="text-2xl font-bold">{s.title}</h3>
@@ -131,7 +130,7 @@ const Services = () => {
             </div>
             <div className="lg:w-1/2 relative">
                <div className="relative z-10 rounded-[3rem] overflow-hidden border-8 border-slate-800 shadow-2xl">
-                  <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=800" alt="Factory" />
+                  <img src="../../../src/assets/sep.jpg" alt="Factory" className='h-[600px]' />
                </div>
                <div className="absolute -bottom-10 -right-10 bg-blue-600 p-8 rounded-[2rem] z-20 hidden md:block">
                   <p className="text-4xl font-black italic">100%</p>

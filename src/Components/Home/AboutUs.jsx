@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FaIndustry, FaGlobe, FaCheckCircle, FaAward, FaTools, 
+FaCheckCircle, FaAward, FaTools, 
   FaHandshake, FaMicrochip, FaLeaf, FaUsers, FaChartLine,
-  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGlobeAsia
+  FaGlobeAsia
 } from 'react-icons/fa';
-
+import { HiOutlineSparkles } from "react-icons/hi";
 const AboutUs = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -18,7 +18,7 @@ const AboutUs = () => {
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[70vh] flex items-center bg-slate-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-40">
-          <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=2000" alt="Textile Background" className="w-full h-full object-cover" />
+          <img src="../../../src/assets/f-5.jpeg" alt="Textile Background" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center lg:text-left">
           <motion.span initial="hidden" animate="visible" variants={fadeInUp} className="bg-blue-600 px-4 py-2 rounded-md text-sm font-bold tracking-widest uppercase">
@@ -79,27 +79,35 @@ const AboutUs = () => {
       </section>
 
       {/* 4. CORE VALUES */}
-      <section className="py-20 container mx-auto px-6">
-        <h2 className="text-4xl font-black text-center mb-16 uppercase">Core Values</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            { icon: FaCheckCircle, title: "Quality Excellence", desc: "We prioritize superior quality in every fabric." },
-            { icon: FaUsers, title: "Customer Focus", desc: "Our client’s success drives our business." },
-            { icon: FaHandshake, title: "Integrity", desc: "Honest and transparent business building trust." },
-            { icon: FaMicrochip, title: "Innovation", desc: "Embracing new technologies to stay ahead." },
-            { icon: FaChartLine, title: "Reliability", desc: "Timely delivery and consistent performance." },
-            { icon: FaLeaf, title: "Sustainability", desc: "Environmentally responsible practices." },
-            { icon: FaUsers, title: "Collaboration", desc: "Strong partnerships and teamwork." },
-            { icon: FaTools, title: "Improvement", desc: "Constantly seeking ways to improve." }
-          ].map((v, i) => (
-            <div key={i} className="p-6 border rounded-2xl hover:bg-blue-600 hover:text-white transition-all group">
-              <v.icon className="text-3xl text-blue-600 group-hover:text-white mb-4" />
-              <h4 className="font-bold text-xl mb-2">{v.title}</h4>
-              <p className="text-sm opacity-80">{v.desc}</p>
-            </div>
-          ))}
+     <section className="py-20 container mx-auto px-6 bg-gray-50 rounded-3xl">
+  <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-gray-900">
+    Our Core Values
+  </h2>
+  
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { icon: FaCheckCircle, title: "Quality Excellence", desc: "We prioritize superior quality in every fabric." },
+      { icon: FaUsers, title: "Customer Focus", desc: "Our client’s success drives our business." },
+      { icon: FaHandshake, title: "Integrity", desc: "Honest and transparent business building trust." },
+      { icon: FaMicrochip, title: "Innovation", desc: "Embracing new technologies to stay ahead." },
+      { icon: FaChartLine, title: "Reliability", desc: "Timely delivery and consistent performance." },
+      { icon: FaLeaf, title: "Sustainability", desc: "Environmentally responsible practices." },
+      { icon: FaUsers, title: "Collaboration", desc: "Strong partnerships and teamwork." },
+      { icon: FaTools, title: "Improvement", desc: "Constantly seeking ways to improve." }
+    ].map((v, i) => (
+      <div 
+        key={i} 
+        className="group p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-blue-50 group-hover:bg-blue-600 transition-colors duration-300 mb-6">
+          <v.icon className="text-2xl text-blue-600 group-hover:text-white transition-colors duration-300" />
         </div>
-      </section>
+        <h4 className="font-bold text-xl mb-3 text-gray-800">{v.title}</h4>
+        <p className="text-gray-600 text-sm leading-relaxed">{v.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* 5. MD MESSAGE */}
       <section className="py-20 bg-slate-900 text-white overflow-hidden">
@@ -126,19 +134,38 @@ const AboutUs = () => {
       </section>
 
       {/* 6. KNIT FABRICS & SERVICES */}
-      <section className="py-20 container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-black uppercase">Knit Fabric Manufacturing</h2>
-          <p className="text-slate-500 mt-4 max-w-3xl mx-auto">We manufacture all types of knit fabrics, specialty being our core strength.</p>
+     <section className="py-24 container mx-auto px-6">
+  {/* Header Section */}
+  <div className="text-center mb-16">
+    <h2 className="text-4xl md:text-5xl font-black uppercase text-slate-900">Knit Fabric Manufacturing</h2>
+    <p className="text-slate-500 mt-4 max-w-2xl mx-auto text-lg">
+      We manufacture all types of knit fabrics, specialty being our core strength.
+    </p>
+  </div>
+
+  {/* Grid Section */}
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {[
+      "Single Jersey", "Pique", "Lacoste", "Rib", 
+      "Interlock", "Fleece", "Terry", "Jacquard Knit", 
+      "Waffle", "Mesh", "Honeycomb", "Lycra Jersey"
+    ].map((item, i) => (
+      <div 
+        key={i} 
+        className="group flex flex-col items-center justify-center bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-blue-100 hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 cursor-default"
+      >
+        {/* Default Icon */}
+        <div className="mb-4 p-3 bg-blue-50 rounded-full text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+          <HiOutlineSparkles size={24} />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {["Single Jersey", "Pique", "Lacoste", "Rib", "Interlock", "Fleece", "Terry", "Jacquard Knit", "Waffle", "Mesh", "Honeycomb", "Lycra Jersey"].map((item, i) => (
-            <div key={i} className="bg-slate-50 p-4 text-center rounded-xl font-bold border hover:border-blue-600 transition-all cursor-default">
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
+        
+        <span className="font-bold text-slate-700 text-center">
+          {item}
+        </span>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* 7. WHY CHOOSE US */}
       <section className="py-20 bg-blue-600 text-white">
