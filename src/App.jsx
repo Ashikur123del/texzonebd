@@ -8,7 +8,6 @@ import Home from './Pages/Home';
 export default function App() {
   return (
     <Routes>
-    
       <Route path="/" element={<Root />}>
        <Route path="/" element={<Home/>} />
       </Route>

@@ -4,14 +4,14 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icon
 
 const Contact = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-20 px-6 flex items-center justify-center">
+    <section className=" bg-gradient-to-br from-gray-50 to-blue-50 py-10 md:py-20 px-6 flex items-center justify-center">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-5xl w-full bg-white/70 backdrop-blur-xl rounded-[2rem] shadow-2xl border border-white/50 p-8 md:p-12 flex flex-col md:flex-row gap-12"
+        className="max-w-5xl w-full  backdrop-blur-xl rounded-[2rem] shadow-2xl border border-white/50 p-8 md:p-12 flex flex-col md:flex-row gap-12"
       >
-        
+         
         {/* Left Side: Info */}
         <div className="flex-1 space-y-8">
           <div>

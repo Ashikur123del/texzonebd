@@ -79,7 +79,7 @@ const AboutUs = () => {
       </section>
 
       {/* 4. CORE VALUES */}
-     <section className="py-20 container mx-auto px-6 bg-gray-50 rounded-3xl">
+     <section className="py-10 md:py-20 container mx-auto px-6 bg-gray-50 rounded-3xl">
   <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-gray-900">
     Our Core Values
   </h2>
@@ -110,7 +110,7 @@ const AboutUs = () => {
 </section>
 
       {/* 5. MD MESSAGE */}
-      <section className="py-20 bg-slate-900 text-white overflow-hidden">
+      <section className="py-10 md:py-20 bg-slate-900 text-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="bg-slate-800 rounded-[4rem] p-10 md:p-20 flex flex-col lg:flex-row items-center gap-16 relative">
             <div className="lg:w-1/3">

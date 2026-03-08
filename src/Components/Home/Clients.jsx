@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
@@ -8,7 +8,6 @@ import {
   FaHandshake, 
   FaChartLine,
   FaQuoteRight,
-  FaRegBuilding
 } from 'react-icons/fa';
 
 import 'swiper/css';
@@ -20,8 +19,9 @@ const  Clients = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   // For testing, trigger animations immediately
-  const [animateNow, setAnimateNow] = React.useState(false);
-  React.useEffect(() => {
+  const [animateNow, setAnimateNow] = useState(false);
+  
+  useEffect(() => {
     setAnimateNow(true);
   }, []);
 
@@ -117,9 +117,9 @@ const  Clients = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, idx) => {
               const Counter = ({ value, suffix }) => {
-                const [count, setCount] = React.useState(0);
+                const [count, setCount] = useState(0);
                 
-                React.useEffect(() => {
+                useEffect(() => {
                   if (isInView) {
                     const duration = 2000;
                     const steps = 60;
@@ -305,10 +305,13 @@ const  Clients = () => {
               Become a Partner
             </motion.button>
           </motion.div>
-        </div>
+         </div>
       </section>
     </div>
   );
 };
 
+
 export default Clients;
+
+  

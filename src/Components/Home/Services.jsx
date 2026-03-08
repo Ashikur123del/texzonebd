@@ -50,12 +50,12 @@ const Services = () => {
     <div className="bg-[#0A0F1A] text-white min-h-screen font-sans">
       
       {/* --- HERO SECTION: Elegant & Dark --- */}
-      <section className="relative py-28 px-6 overflow-hidden">
+      <section className="relative py-10 md:py-28 px-6 overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full -mr-64 -mt-64"></div>
         <div className="container mx-auto text-center relative z-10">
           <motion.div {...fadeInUp}>
             <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Our Expertise</span>
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
               Crafting The Future of <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                 Textile Solutions
@@ -105,7 +105,7 @@ const Services = () => {
       </section>
 
       {/* --- WHY CHOOSE US: Bold Dark Section --- */}
-      <section className="py-24 bg-[#0F172A] relative">
+      <section className=" py-10 md:py-24 bg-[#0F172A] relative">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
@@ -130,7 +130,7 @@ const Services = () => {
             </div>
             <div className="lg:w-1/2 relative">
                <div className="relative z-10 rounded-[3rem] overflow-hidden border-8 border-slate-800 shadow-2xl">
-                  <img src="../../../src/assets/sep.jpg" alt="Factory" className='h-[600px]' />
+                  <img src="../../../src/assets/sep.jpg" alt="Factory" className='h-[400px] md:h-[600px]' />
                </div>
                <div className="absolute -bottom-10 -right-10 bg-blue-600 p-8 rounded-[2rem] z-20 hidden md:block">
                   <p className="text-4xl font-black italic">100%</p>
