@@ -60,14 +60,14 @@ const Navber = () => {
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           
-          <div onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="flex items-center gap-2 group cursor-pointer">
-            <motion.div whileHover={{ rotate: 360 }} className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/30">
-              <span className="text-xl font-black italic">T</span>
-            </motion.div>
-            <span className="text-xl font-black tracking-tighter group-hover:text-primary transition-colors">
-              TEX ZONE <span className="text-primary">BD</span>
-            </span>
-          </div>
+         <div 
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+  className="flex items-center gap-2 group cursor-pointer"
+>
+  <div className="group-hover:opacity-80 transition-opacity">
+    <img src="../../src/assets/logo.png" className="w-60" alt="Logo" />
+  </div>
+</div>
 
           <div className="hidden lg:flex items-center gap-6">
             <ul className="flex items-center">

@@ -30,8 +30,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-10">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-black italic shadow-2xl shadow-blue-500/30">T</div>
-              <span className="font-black text-3xl tracking-tighter uppercase whitespace-nowrap text-slate-900 dark:text-white">TEX ZONE <span className="text-blue-600">BD</span></span>
+            <img src='../../src/assets/logo.png'/>
             </div>
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed font-light text-xl">
               Elevating the global apparel industry with precision knit manufacturing and strategic textile sourcing. Excellence in every fiber.
