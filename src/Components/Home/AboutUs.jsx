@@ -6,6 +6,7 @@ FaCheckCircle, FaAward, FaTools,
   FaGlobeAsia
 } from 'react-icons/fa';
 import { HiOutlineSparkles } from "react-icons/hi";
+import images from '../../assets/f-5.jpeg'
 const AboutUs = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -18,7 +19,7 @@ const AboutUs = () => {
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[70vh] flex items-center bg-slate-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-40">
-          <img src="../../../src/assets/f-5.jpeg" alt="Textile Background" className="w-full h-full object-cover" />
+          <img src={images} alt="Textile Background" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center lg:text-left">
           <motion.span initial="hidden" animate="visible" variants={fadeInUp} className="bg-blue-600 px-4 py-2 rounded-md text-sm font-bold tracking-widest uppercase">

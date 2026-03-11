@@ -10,6 +10,9 @@ import {
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import img1 from '../../assets/f1.jpg'
+import img2 from '../../assets/f2.jpg'
+import img3 from '../../assets/sep.jpg'
 
 const Services = () => {
   const fadeInUp = {
@@ -26,7 +29,7 @@ const Services = () => {
       icon: <FaIndustry />,
       items: ["Single Jersey", "Pique", "Interlock", "Fleece", "Terry", "Jacquard"],
       bg: "bg-gradient-to-br from-slate-900 to-blue-900",
-      img: "../../../src/assets/f1.jpg"
+      img: img1
     },
     {
       title: "Global Sourcing",
@@ -34,7 +37,7 @@ const Services = () => {
       icon: <FaShip />,
       items: ["Taffeta", "Ribstop", "Softshell", "Microfiber", "Canvas", "Taslane"],
       bg: "bg-gradient-to-br from-blue-900 to-indigo-900",
-      img: "../../../src/assets/f2.jpg"
+      img: img2
     },
     {
       title: "Advanced Processing",
@@ -42,7 +45,7 @@ const Services = () => {
       icon: <FaCogs />,
       items: ["All-over Print", "Contract Dyeing", "Shade Correction", "Fabric Repair"],
       bg: "bg-gradient-to-br from-slate-800 to-slate-900",
-      img: "../../../src/assets/sep.jpg"
+      img: img3
     }
   ];
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaBars, FaTimes, FaPhone, FaEnvelope, FaChevronRight } from 'react-icons/fa';
+import imags from '../assets/logo.png'
 
 const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +66,7 @@ const Navber = () => {
   className="flex items-center gap-2 group cursor-pointer"
 >
   <div className="group-hover:opacity-80 transition-opacity">
-    <img src="../../src/assets/logo.png" className="w-60" alt="Logo" />
+    <img src={imags} className="w-60" alt="Logo" />
   </div>
 </div>
 
