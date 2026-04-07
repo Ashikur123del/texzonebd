@@ -7,6 +7,7 @@ FaCheckCircle, FaAward, FaTools,
 } from 'react-icons/fa';
 import { HiOutlineSparkles } from "react-icons/hi";
 import images from '../../assets/f-5.jpeg'
+import WhyChooseUs from '../WhyChooseUs';
 const AboutUs = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -168,27 +169,7 @@ const AboutUs = () => {
   </div>
 </section>
 
-      {/* 7. WHY CHOOSE US */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-black text-center mb-16 uppercase tracking-tighter">Why Choose Tex Zone BD?</h2>
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              { t: "End-to-End Solutions", d: "Everything from manufacturing to finishing under one roof." },
-              { t: "4-Point Quality Check", d: "Strict QC from yarn to finished goods with 100% inspection." },
-              { t: "Free R&D Support", d: "We can reverse-engineer any fabric swatch or photo for free." },
-              { t: "Reliable Data Server", d: "All technical parameters stored for perfect repeat orders." },
-              { t: "Global Network", d: "Access to the best imported fabrics from China & beyond." },
-              { t: "Technical Hotline", d: "Free technical advice for any fabric-related issues." }
-            ].map((item, i) => (
-              <div key={i} className="bg-blue-700/50 p-8 rounded-3xl border border-white/10 hover:bg-white hover:text-blue-600 transition-all duration-500">
-                <h4 className="text-2xl font-black mb-4">{item.t}</h4>
-                <p className="opacity-90 leading-relaxed">{item.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     <WhyChooseUs/> 
     </div>
   );
 };
