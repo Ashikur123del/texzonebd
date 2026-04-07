@@ -6,13 +6,8 @@ import WhyChooseSection from './WhyChooseSection';
 const Services = () => {
   return (
     <div className="bg-[#0A0F1A]">
-      {/* ১. স্লাইডার সেকশন */}
       <ServicesAll />
-      
-      {/* ২. ট্রাস্ট/কেন আমাদের বেছে নেবেন সেকশন */}
       <WhyChooseSection />
-
-      {/* ৩. কল টু অ্যাকশন ফুটার */}
       <section className="py-24 container mx-auto px-6">
         <div className="bg-gradient-to-br from-blue-700 to-indigo-900 rounded-[4rem] p-10 md:p-20 text-center relative overflow-hidden shadow-2xl">
           <h2 className="text-3xl md:text-5xl font-black mb-6 italic text-white">
