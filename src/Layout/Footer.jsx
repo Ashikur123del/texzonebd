@@ -7,6 +7,8 @@ import {
   FaArrowUp, FaChevronRight
 } from 'react-icons/fa';
 
+import logoimg from '../assets/logo.png'
+
 const Footer = () => {
 
   const scrollToSection = (id) => {
@@ -30,7 +32,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-10">
             <div className="flex items-center gap-4">
-            <img src='../../src/assets/logo.png'/>
+            <img src={logoimg} />
             </div>
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed font-light text-xl">
               Elevating the global apparel industry with precision knit manufacturing and strategic textile sourcing. Excellence in every fiber.
