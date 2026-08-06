@@ -1,55 +1,81 @@
-
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
-  FaLinkedin, FaFacebook, FaTwitter, FaInstagram,
-  FaPhoneAlt, FaEnvelope, FaGlobe, FaMapMarkerAlt,
-  FaArrowUp, FaChevronRight
-} from 'react-icons/fa';
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaGlobe,
+  FaMapMarkerAlt,
+  FaArrowUp,
+  FaChevronRight,
+} from "react-icons/fa";
 
-import logoimg from '../assets/logo.png'
+import logoimg from "../assets/logo.png";
 
 const Footer = () => {
-
   const scrollToSection = (id) => {
+    if (id === "all" || id === "home") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
+
     const element = document.getElementById(id);
     if (element) {
       window.scrollTo({
         top: element.offsetTop - 80,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <footer className="bg-slate-100 dark:bg-slate-950 pt-24  text-slate-900 dark:text-slate-100 relative overflow-hidden transition-colors duration-500 border-t border-slate-200 dark:border-white/5">
-      {/* Background Decor */}
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/5 dark:bg-blue-600/5 blur-[150px] rounded-full -mr-64 -mb-64"></div>
+    <footer className="bg-[#0a0f1d] text-slate-300 pt-20 pb-10 relative overflow-hidden font-sans border-t border-slate-800/80">
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#990000]/15 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-900/10 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24 lg:mb-32">
-
-          {/* Brand Info */}
-          <div className="space-y-10">
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div className="space-y-6">
             <div className="flex items-center gap-4">
-            <img src={logoimg} />
+              <img
+                src={logoimg}
+                alt="Tex Zone BD Logo"
+                className="h-12 w-auto object-contain bg-white/90 p-2 rounded-xl shadow-lg border border-white/20"
+              />
             </div>
-            <p className="text-slate-500 dark:text-slate-400 leading-relaxed font-light text-xl">
-              Elevating the global apparel industry with precision knit manufacturing and strategic textile sourcing. Excellence in every fiber.
+            <p className="text-slate-400 leading-relaxed font-normal text-sm md:text-base">
+              100% Export-Oriented Knit Fabric Importer, Manufacturer &
+              Supplier. Precision engineering and excellence in every yarn.
             </p>
-            <div className="flex gap-5">
+            <div className="flex gap-3 pt-2">
               {[
-                { icon: <FaLinkedin />, url: "https://linkedin.com/company/texzonebd" },
+                {
+                  icon: <FaLinkedin />,
+                  url: "https://linkedin.com/company/texzonebd",
+                },
                 { icon: <FaFacebook />, url: "#" },
                 { icon: <FaTwitter />, url: "#" },
-                { icon: <FaInstagram />, url: "#" }
+                { icon: <FaInstagram />, url: "#" },
               ].map((social, i) => (
                 <a
                   key={i}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-14 h-14 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl flex items-center justify-center text-xl text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white hover:scale-110 active:scale-90 transition-all shadow-xl"
+                  className="w-10 h-10 bg-slate-900/80 border border-slate-700/60 rounded-xl flex items-center justify-center text-slate-300 hover:bg-[#990000] hover:text-white hover:border-[#990000] hover:-translate-y-1 active:scale-95 transition-all duration-300 shadow-md"
                 >
                   {social.icon}
                 </a>
@@ -57,70 +83,118 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-xs font-black mb-10 lg:mb-12 uppercase tracking-[0.4em] text-blue-600 dark:text-blue-500">Navigation</h4>
-            <ul className="space-y-6">
-              {['Home', 'About', 'Services', 'Process', 'Clients', 'Terms', 'Contact'].map((item) => (
+            <h4 className="text-xs font-black mb-6 uppercase tracking-[0.25em] text-[#ff4d4d]">
+              Navigation
+            </h4>
+            <ul className="space-y-3.5">
+              {[
+                "All",
+                "Home",
+                "About",
+                "Services",
+                "Process",
+                "Clients",
+                "Terms",
+                "Contact",
+              ].map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="flex items-center gap-4 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-3 transition-all font-bold text-sm uppercase tracking-widest group"
+                    className={`flex items-center gap-2 transition-all duration-200 font-semibold text-sm group cursor-pointer ${
+                      item === "All"
+                        ? "text-[#ff4d4d] font-black hover:text-white"
+                        : "text-slate-400 hover:text-white hover:translate-x-2"
+                    }`}
                   >
-                    <FaChevronRight className="text-[10px] text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" /> {item}
+                    <FaChevronRight className="text-[10px] text-[#ff4d4d] opacity-0 group-hover:opacity-100 transition-opacity" />{" "}
+                    {item}
                   </button>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Services */}
           <div>
-            <h4 className="text-xs font-black mb-10 lg:mb-12 uppercase tracking-[0.4em] text-blue-600 dark:text-blue-500">Fabrics</h4>
-            <ul className="space-y-6">
+            <h4 className="text-xs font-black mb-6 uppercase tracking-[0.25em] text-[#ff4d4d]">
+              Services & Fabrics
+            </h4>
+            <ul className="space-y-3.5">
               {[
-                "Single Jersey",
-                "Lacoste / Pique",
-                "Interlock / Rib",
-                "Fleece / Terry",
-                "Specialty Knits",
-                "Imported Wovens"
+                "Knit Fabric Manufacturing",
+                "Imported Fabric Supply",
+                "Allover Print Services",
+                "Fabric Repairing",
+                "Single Jersey & Pique",
+                "Fleece & Specialty Knits",
               ].map((service) => (
-                <li key={service} className="flex items-center gap-4 text-slate-500 dark:text-slate-400 font-bold text-sm uppercase tracking-widest">
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-800"></span> {service}
+                <li
+                  key={service}
+                  className="flex items-center gap-2 text-slate-400 font-semibold text-sm"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#990000]"></span>{" "}
+                  {service}
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h4 className="text-xs font-black mb-10 lg:mb-12 uppercase tracking-[0.4em] text-blue-600 dark:text-blue-500">Get In Touch</h4>
-            <ul className="space-y-8">
-              <li className="flex items-start gap-6 group">
-                <div className="w-12 h-12 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
+            <h4 className="text-xs font-black mb-6 uppercase tracking-[0.25em] text-[#ff4d4d]">
+              Get In Touch
+            </h4>
+            <ul className="space-y-5 text-sm">
+              <li className="flex items-start gap-4 group">
+                <div className="w-9 h-9 bg-slate-900 border border-slate-700/60 rounded-xl flex items-center justify-center text-[#ff4d4d] group-hover:bg-[#990000] group-hover:text-white transition-all flex-shrink-0 mt-0.5">
                   <FaPhoneAlt />
                 </div>
-                <div className="text-slate-500 dark:text-slate-400 font-bold tracking-widest text-sm transition-colors">
-                  <p>+8801710119711</p>
-                  <p>+8801611847184</p>
+                <div className="text-slate-200 font-bold">
+                  <p>+88 01710 11 97 11</p>
                 </div>
               </li>
-              <li className="flex items-start gap-6 group">
-                <div className="w-12 h-12 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
+
+              <li className="flex items-start gap-4 group">
+                <div className="w-9 h-9 bg-slate-900 border border-slate-700/60 rounded-xl flex items-center justify-center text-[#ff4d4d] group-hover:bg-[#990000] group-hover:text-white transition-all flex-shrink-0 mt-0.5">
                   <FaEnvelope />
                 </div>
-                <p className="text-slate-500 dark:text-slate-400 font-black break-all text-sm tracking-widest transition-colors">info@texzonebd.com</p>
+                <p className="text-slate-200 font-semibold break-all">
+                  manik@texzonebd.com
+                </p>
               </li>
-              <li className="flex items-start gap-6 group">
-                <div className="w-12 h-12 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
+
+              <li className="flex items-start gap-4 group">
+                <div className="w-9 h-9 bg-slate-900 border border-slate-700/60 rounded-xl flex items-center justify-center text-[#ff4d4d] group-hover:bg-[#990000] group-hover:text-white transition-all flex-shrink-0 mt-0.5">
                   <FaGlobe />
                 </div>
-                <p className="text-slate-500 dark:text-slate-400 font-bold italic text-sm tracking-widest transition-colors">www.texzonebd.com</p>
+                <p className="text-slate-200 font-semibold">
+                  www.texzonebd.com
+                </p>
+              </li>
+
+              <li className="flex items-start gap-4 group">
+                <div className="w-9 h-9 bg-slate-900 border border-slate-700/60 rounded-xl flex items-center justify-center text-[#ff4d4d] group-hover:bg-[#990000] group-hover:text-white transition-all flex-shrink-0 mt-0.5">
+                  <FaMapMarkerAlt />
+                </div>
+                <p className="text-slate-400 text-xs leading-relaxed">
+                  <strong className="text-slate-200">Head Office:</strong>{" "}
+                  Uttara, Dhaka <br />
+                  <strong className="text-slate-200">
+                    Gazipur Office:
+                  </strong>{" "}
+                  Vogra, Gazipur
+                </p>
               </li>
             </ul>
           </div>
+        </div>
+        <div className="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <p>© {new Date().getFullYear()} TEX ZONE BD. All Rights Reserved.</p>
 
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-2 bg-slate-900 border border-slate-800 hover:bg-[#990000] text-slate-300 hover:text-white hover:border-[#990000] px-4 py-2.5 rounded-xl transition-all duration-300 cursor-pointer shadow-sm"
+          >
+            Back to top <FaArrowUp className="text-xs" />
+          </button>
         </div>
       </div>
     </footer>

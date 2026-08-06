@@ -6,8 +6,6 @@ import {
   FaArrowRight, FaPhoneAlt, FaEnvelope, 
   FaCheckCircle, FaAward, FaGlobe 
 } from 'react-icons/fa';
-
-// Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
@@ -31,13 +29,11 @@ const Hero = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center bg-base-100 overflow-hidden py-12 lg:py-0">
       
-      {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50 -skew-x-12 translate-x-20 hidden lg:block"></div>
 
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-          
-          {/* --- LEFT SIDE: CONTENT --- */}
+        
           <motion.div 
             className="w-full lg:w-1/2 space-y-6 z-10"
             initial={{ opacity: 0, x: -50 }}
@@ -57,7 +53,6 @@ const Hero = () => {
               <span className="font-bold text-slate-800">TEX ZONE BD</span> is your premier partner for high-quality knit fabric manufacturing and global sourcing solutions.
             </p>
 
-            {/* Stats Badge */}
             <div className="flex flex-wrap gap-4 py-4">
               <div className="flex items-center gap-3 bg-white shadow-sm border p-3 rounded-2xl">
                 <FaAward className="text-3xl text-orange-500" />
@@ -75,7 +70,6 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Buttons */}
             <div className="flex flex-wrap gap-4">
               <button className="btn btn-primary btn-lg rounded-full px-8 shadow-xl shadow-primary/20 group">
                 Get a Quote <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -85,7 +79,6 @@ const Hero = () => {
               </button>
             </div>
 
-            {/* Contact Quick Link */}
             <div className="flex gap-6 pt-4 border-t border-slate-100">
                <a href="tel:+8801710119711" className="flex items-center gap-2 text-sm font-semibold hover:text-primary transition-colors">
                   <FaPhoneAlt className="text-primary" /> +8801710119711
@@ -96,14 +89,12 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* --- RIGHT SIDE: SLIDER --- */}
           <motion.div 
             className="w-full lg:w-1/2 relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Creative Shape Wrapper */}
             <div className="relative z-10 rounded-[2rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white ring-1 ring-slate-100">
               <Swiper
                 modules={[Autoplay, EffectFade, Pagination]}
@@ -132,7 +123,6 @@ const Hero = () => {
               </Swiper>
             </div>
 
-            {/* Floating Decorative Card */}
             <motion.div 
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity }}

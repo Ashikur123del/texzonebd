@@ -10,8 +10,8 @@ const Home = () => {
     <div>
       <Element name="home"><Hero /></Element> 
       <Element name="about"><AboutUs /></Element>
-      <Element name="services"><Services /></Element>
       <Element name="clients"><Clients /></Element>
+      <Element name="services"><Services /></Element>
       <Element name="contact"><Contact /></Element>
     </div>
   );

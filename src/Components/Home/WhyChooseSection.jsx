@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFlask, FaFingerprint, FaTools } from 'react-icons/fa';
-import factoryImg from '../../assets/sep.jpg'; // Path ঠিক করে নিন
+import factoryImg from '../../assets/sep.jpg'; 
 
 const WhyChooseSection = () => {
   const points = [
