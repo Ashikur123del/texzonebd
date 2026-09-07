@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
-import Img1 from '../../assets/hero.jpeg'
+import Img1 from '../../assets/Ban-1 (2).jpeg'
 import Img2 from '../../assets/hero-2.jpeg'
 import Img3 from '../../assets/hero-3.jpeg'
 
@@ -130,7 +130,7 @@ const Hero = () => {
                         alt={slide.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    
                       <div className="absolute bottom-10 left-10 text-white">
                         <p className="uppercase tracking-[0.2em] text-xs font-bold text-primary mb-2">Tex Zone BD Gallery</p>
                         <h3 className="text-3xl font-bold">{slide.title}</h3>
