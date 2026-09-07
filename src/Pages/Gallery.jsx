@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBookOpen, FaTimes, FaCalendarAlt, FaUser } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Apnar Image Import gulo
+
 import g1 from "../assets/ab-3.jpeg";
 import g2 from "../assets/ap-1.jpeg";
 import g3 from "../assets/ap-2.jpeg";
@@ -132,7 +132,6 @@ const Blog = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50/50 via-white to-amber-50/40 py-12 md:py-16">
-      {/* Background Decoration */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -left-40 -top-40 h-full w-full rounded-full bg-emerald-200/20 blur-3xl" />
         <div className="absolute -right-32 top-1/4 h-[400px] w-[400px] rounded-full bg-amber-200/25 blur-3xl" />
@@ -141,7 +140,6 @@ const Blog = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        {/* Header Section */}
         <div className="text-center mb-12">
           <span className="text-xs uppercase tracking-widest font-black text-[#990000] bg-red-100/60 px-3 py-1 rounded-full inline-block mb-3">
             Industry Insights
@@ -174,8 +172,6 @@ const Blog = () => {
                   {post.date}
                 </div>
               </div>
-
-              {/* Content Body */}
               <div className="p-6 flex flex-col flex-grow justify-between">
                 <div>
                   <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
@@ -206,7 +202,6 @@ const Blog = () => {
         </div>
       </div>
 
-      {/* Article Detail Modal */}
       <AnimatePresence>
         {selectedPost && (
           <div className="fixed inset-0 bg-black/70 z-[999] flex items-center justify-center p-4 backdrop-blur-sm">
@@ -219,7 +214,6 @@ const Blog = () => {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               className="relative bg-white w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-slate-200 z-10 max-h-[90vh] flex flex-col"
             >
-              {/* Close Button */}
               <button
                 onClick={() => setSelectedPost(null)}
                 className="absolute top-4 right-4 bg-black/60 text-white hover:bg-[#990000] w-10 h-10 rounded-full flex items-center justify-center transition-colors z-20 cursor-pointer"
@@ -227,7 +221,7 @@ const Blog = () => {
                 <FaTimes size={18} />
               </button>
 
-              {/* Modal Banner */}
+
               <div className="relative h-64 md:h-80 w-full overflow-hidden shrink-0">
                 <img
                   src={selectedPost.img}
@@ -246,7 +240,6 @@ const Blog = () => {
                 </div>
               </div>
 
-              {/* Modal Content */}
               <div className="p-6 md:p-8 overflow-y-auto space-y-4 text-slate-700 leading-relaxed">
                 <p className="text-lg font-medium text-slate-900 italic border-l-4 border-[#990000] pl-4 bg-slate-50 py-2">
                   "{selectedPost.excerpt}"
