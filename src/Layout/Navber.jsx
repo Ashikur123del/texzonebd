@@ -41,7 +41,8 @@ const navItems = [
   { name: "Services", path: "services" },
   { name: "Clients", path: "clients" },
   { name: "Contact", path: "contact" },
-  { name: "Gallery", path: "/gallery" }, // 👈 এখানে অবশ্যই '/' দিন
+  { name: "Blog", path: "/gallery" },
+  { name: "Import", path: "/import" },
 ];
 
   const handleNavClick = (path) => {

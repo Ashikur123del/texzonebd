@@ -42,20 +42,35 @@ const coreValues = [
 
 const WhoWeAre = () => {
   return (
-    <>
-      <section className="py-24 container mx-auto px-6">
+    <> 
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50/50 via-white to-amber-50/40 py-5 md:py-6">
+      {/* Background Decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Top Left Glow */}
+        <div className="absolute -left-40 -top-40 h-full w-full rounded-full bg-emerald-200/20 blur-3xl" />
+
+        {/* Right Glow */}
+        <div className="absolute -right-32 top-1/4 h-[400px] w-[400px] rounded-full bg-amber-200/25 blur-3xl" />
+
+        {/* Bottom Glow */}
+        <div className="absolute bottom-[-180px] left-1/3 h-[450px] w-[450px] rounded-full bg-emerald-100/40 blur-3xl" />
+
+        {/* Soft Radial Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.08),transparent_30%),radial-gradient(circle_at_85%_70%,rgba(245,158,11,0.08),transparent_30%)]" />
+      </div>
+      <div className="py-24 container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-7/12">
             <div className="inline-block px-3.5 py-1 bg-red-50 text-[#990000] font-bold rounded-lg text-sm mb-4 border border-red-100">
               WHO WE ARE
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-              A Reliable Textile Solution Provider in Bangladesh
+              A Reliable  Textile <span className="text-[#990000]"> Solution Provider</span> in Bangladesh
             </h2>
-            <p className="text-lg text-slate-600 mb-6 text-justify leading-relaxed">
+            <p className="text-lg text-slate-700 mb-6 text-justify leading-relaxed">
               <strong className="text-slate-900">Tex Zone BD</strong> is a leading name in the garment and textile industry, offering premium fabric sourcing, manufacturing, and support services. We specialize in high-quality knit fabrics—both in-house and imported—to meet diverse apparel production needs with consistency and care.
             </p>
-            <p className="text-lg text-slate-600 text-justify leading-relaxed">
+            <p className="text-lg text-slate-700 text-justify leading-relaxed">
               Beyond fabric supply, we provide end-to-end services including contract knitting, dyeing, all-over printing, and fabric repairing. We deliver more than just fabric — we deliver solutions that simplify and strengthen your production process.
             </p>
           </div>
@@ -78,7 +93,7 @@ const WhoWeAre = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section className=" py-10  bg-stone-100/70">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8">
@@ -122,7 +137,8 @@ const WhoWeAre = () => {
               <p className="text-slate-500 text-sm leading-relaxed">{v.desc}</p>
             </motion.div>
           ))}
-        </motion.div>
+          </motion.div>
+          </section>
       </section>
     </>
   );

@@ -12,15 +12,26 @@ import {
 
 const Contact = () => {
   return (
-    <section className="bg-stone-50 py-16 md:py-24 px-6 flex items-center justify-center font-sans relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-100/50 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-stone-200/60 rounded-full blur-3xl pointer-events-none" />
+<section className="relative overflow-hidden bg-gradient-to-br from-emerald-50/50 via-white to-amber-50/40 py-5 md:py-6">
+      {/* Background Decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Top Left Glow */}
+        <div className="absolute -left-40 -top-40 h-full w-full rounded-full bg-emerald-200/20 blur-3xl" />
 
+        {/* Right Glow */}
+        <div className="absolute -right-32 top-1/4 h-[400px] w-[400px] rounded-full bg-amber-200/25 blur-3xl" />
+
+        {/* Bottom Glow */}
+        <div className="absolute bottom-[-180px] left-1/3 h-[450px] w-[450px] rounded-full bg-emerald-100/40 blur-3xl" />
+
+        {/* Soft Radial Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.08),transparent_30%),radial-gradient(circle_at_85%_70%,rgba(245,158,11,0.08),transparent_30%)]" />
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-6xl w-full bg-white rounded-3xl shadow-xl border border-stone-200/80 p-8 md:p-12 flex flex-col lg:flex-row gap-12 relative z-10"
+        className="max-w-6xl mx-auto w-full bg-white rounded-3xl shadow-xl border border-stone-200/80 p-8 md:p-12 flex flex-col lg:flex-row gap-12 relative z-10"
       >
         <div className="flex-1 space-y-8">
           <div>

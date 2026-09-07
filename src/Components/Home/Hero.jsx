@@ -10,24 +10,42 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
+import Img1 from '../../assets/hero.jpeg'
+import Img2 from '../../assets/hero-2.jpeg'
+import Img3 from '../../assets/hero-3.jpeg'
+
 const Hero = () => {
   const heroImages = [
     {
-      url: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800",
+      url: Img1,
       title: "Premium Knitting",
     },
     {
-      url: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000",
+      url: Img2,
       title: "Modern Textiles",
     },
     {
-      url: "https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: Img3,
       title: "Export Quality",
     }
   ];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-base-100 overflow-hidden py-12 lg:py-0">
+   <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50/50 via-white to-amber-50/40 py-16 md:py-24">
+      {/* Background Decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Top Left Glow */}
+        <div className="absolute -left-40 -top-40 h-full w-full rounded-full bg-emerald-200/30 blur-3xl" />
+
+        {/* Right Glow */}
+        <div className="absolute -right-32 top-1/4 h-[400px] w-[400px] rounded-full bg-amber-200/25 blur-3xl" />
+
+        {/* Bottom Glow */}
+        <div className="absolute bottom-[-180px] left-1/3 h-[450px] w-[450px] rounded-full bg-emerald-100/40 blur-3xl" />
+
+        {/* Soft Radial Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.08),transparent_30%),radial-gradient(circle_at_85%_70%,rgba(245,158,11,0.08),transparent_30%)]" />
+      </div>
       
       <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50 -skew-x-12 translate-x-20 hidden lg:block"></div>
 
@@ -46,7 +64,7 @@ const Hero = () => {
 
             <h1 className="text-5xl lg:text-7xl font-black leading-[1.1] text-neutral">
               Quality Fabrics <br />
-              <span className="text-primary italic">Global Standards.</span>
+              <span className="text-[#990000]  italic">Global Standards.</span>
             </h1>
 
             <p className="text-lg text-slate-500 max-w-lg leading-relaxed">

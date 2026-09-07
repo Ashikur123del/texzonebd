@@ -1,22 +1,41 @@
-import React from "react";
 import { FaQuoteLeft } from "react-icons/fa";
+import Manik from "../../assets/ManikMiya.png";
 
 const MdMessage = () => {
   return (
-    <section className="py-20 bg-stone-50 text-slate-900 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-red-900/5 rounded-full blur-3xl pointer-events-none" />
+     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50/50 via-white to-amber-50/40 py-5 md:py-6">
+      {/* Background Decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Top Left Glow */}
+        <div className="absolute -left-40 -top-40 h-full w-full rounded-full bg-emerald-200/20 blur-3xl" />
+
+        {/* Right Glow */}
+        <div className="absolute -right-32 top-1/4 h-[400px] w-[400px] rounded-full bg-amber-200/25 blur-3xl" />
+
+        {/* Bottom Glow */}
+        <div className="absolute bottom-[-180px] left-1/3 h-[450px] w-[450px] rounded-full bg-emerald-100/40 blur-3xl" />
+
+        {/* Soft Radial Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.08),transparent_30%),radial-gradient(circle_at_85%_70%,rgba(245,158,11,0.08),transparent_30%)]" />
+      </div>
+    <div className="py-20 text-slate-900 relative overflow-hidden">
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="bg-white rounded-[2.5rem] p-8 md:p-14 border border-red-900/10 flex flex-col lg:flex-row items-center gap-12 shadow-xl shadow-red-950/5">
-          <div className="lg:w-4/12 relative w-full">
+          {/* Image Container */}
+          <div className="lg:w-4/12 relative w-full h-[380px] md:h-[420px]">
             <div className="absolute -inset-2 bg-gradient-to-tr from-[#990000] to-red-600 rounded-[2.5rem] opacity-25 blur-lg" />
-            <img
-              src="https://img.freepik.com/free-photo/portrait-successful-man_23-2149026293.jpg"
-              className="relative w-full h-[380px] md:h-[420px] object-cover rounded-[2rem] shadow-md border-4 border-white"
-              alt="MD Manik Sorder"
-            />
+            <div className="relative w-full h-full rounded-[2rem] overflow-hidden border-4 border-white shadow-md">
+              <img
+                src={Manik}
+                alt="MD Manik Sorder"
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
           </div>
 
+          {/* Content Wrapper */}
           <div className="lg:w-8/12">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-red-50 text-[#990000] mb-6 shadow-sm">
               <FaQuoteLeft className="text-xl" />
@@ -47,7 +66,8 @@ const MdMessage = () => {
           </div>
         </div>
       </div>
-    </section>
+      </div>
+      </section>
   );
 };
 

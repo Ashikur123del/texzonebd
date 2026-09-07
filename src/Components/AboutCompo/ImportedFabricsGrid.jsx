@@ -2,6 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { HiSparkles } from "react-icons/hi2";
 
+import FC1 from '../../assets/FC-1.jpeg'
+import FC2 from '../../assets/FC-2.jpeg'
+import FC3 from '../../assets/FC-3.jpeg'
+import FC4 from '../../assets/FC-4.jpeg'
+import FC5 from '../../assets/FC-5.jpeg'
+import FC6 from '../../assets/FC-6.jpeg'
+import FC7 from '../../assets/FC-7.jpeg'
+import FC8 from '../../assets/FC-8.jpeg'
+
 const fabricItems = [
   "TAFFETA",
   "RIPSTOP",
@@ -30,41 +39,56 @@ const fabricItems = [
 const fabricGallery = [
   {
     title: "SCUBA FABRIC",
-    img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
+    img: FC1,
   },
   {
     title: "VISCOSE POPLIN AOP",
-    img: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=600&auto=format&fit=crop",
+    img: FC2,
   },
   {
     title: "FLEECE FABRIC",
-    img: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=600&auto=format&fit=crop",
+    img: FC3,
   },
   {
     title: "POLYESTER WOVEN AOP",
-    img: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=600&auto=format&fit=crop",
+    img: FC4,
   },
   {
     title: "MUSLIN FABRIC",
-    img: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?q=80&w=600&auto=format&fit=crop",
+    img: FC5,
   },
   {
     title: "SOLID, Y/D KNIT",
-    img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=600&auto=format&fit=crop",
+    img: FC6,
   },
 {
   title: "VELOUR",
-  img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=600&auto=format&fit=crop",
+  img: FC7,
 },
   {
     title: "DENIM",
-    img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    img: FC8,
   },
 ];
 
 const ImportedFabricsGrid = () => {
   return (
-    <section className="pb-24 container mx-auto px-6">
+     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50/50 via-white to-amber-50/40 py-5 md:py-6">
+      {/* Background Decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Top Left Glow */}
+        <div className="absolute -left-40 -top-40 h-full w-full rounded-full bg-emerald-200/20 blur-3xl" />
+
+        {/* Right Glow */}
+        <div className="absolute -right-32 top-1/4 h-[400px] w-[400px] rounded-full bg-amber-200/25 blur-3xl" />
+
+        {/* Bottom Glow */}
+        <div className="absolute bottom-[-180px] left-1/3 h-[450px] w-[450px] rounded-full bg-emerald-100/40 blur-3xl" />
+
+        {/* Soft Radial Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.08),transparent_30%),radial-gradient(circle_at_85%_70%,rgba(245,158,11,0.08),transparent_30%)]" />
+      </div>
+    <div className="pb-24 container mx-auto px-6">
       <div className="mb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-[#990000] font-bold uppercase tracking-widest text-sm">
@@ -138,7 +162,8 @@ const ImportedFabricsGrid = () => {
           </p>
         </div>
       </div>
-    </section>
+      </div>
+      </section>
   );
 };
 

@@ -15,7 +15,22 @@ const ImportedHero = () => {
 
   return (
     <>
-      <section className="relative py-10 bg-stone-950 text-white overflow-hidden">
+       <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50/50 via-white to-amber-50/40 py-5 md:py-6">
+      {/* Background Decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Top Left Glow */}
+        <div className="absolute -left-40 -top-40 h-full w-full rounded-full bg-emerald-200/20 blur-3xl" />
+
+        {/* Right Glow */}
+        <div className="absolute -right-32 top-1/4 h-[400px] w-[400px] rounded-full bg-amber-200/25 blur-3xl" />
+
+        {/* Bottom Glow */}
+        <div className="absolute bottom-[-180px] left-1/3 h-[450px] w-[450px] rounded-full bg-emerald-100/40 blur-3xl" />
+
+        {/* Soft Radial Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.08),transparent_30%),radial-gradient(circle_at_85%_70%,rgba(245,158,11,0.08),transparent_30%)]" />
+      </div>
+      <div className="relative py-10 bg-stone-950 text-white overflow-hidden">
         <div className="absolute -top-24 -right-24 w-96 h-50 bg-red-900/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-50 h-96 bg-[#990000]/20 rounded-full blur-3xl pointer-events-none" />
 
@@ -35,11 +50,11 @@ const ImportedHero = () => {
             Reliable fabric solutions from China meeting international RMG standards in Bangladesh.
           </p>
         </div>
-      </section>
+      </div>
 
-      <section className="py-20 container mx-auto px-6">
+      <div className="py-20 container mx-auto px-6">
         <div className="bg-white rounded-3xl p-8 md:p-12 border border-stone-200/80 shadow-lg mb-16 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-2 h-full bg-[#990000]" />
+      
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-4">
             Global Quality Sourcing & Supply Chain
           </h2>
@@ -73,7 +88,8 @@ const ImportedHero = () => {
               </div>
             ))}
           </div>
-        </div>
+          </div>
+          </div>
       </section>
     </>
   );
